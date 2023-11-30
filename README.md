@@ -40,7 +40,13 @@ La familia de microcontroladores STM32 está basada en núcleos ARM Cortex-M de 
 El proyecto tiene la funcionalidad principal  de implementación de una  cerradura digital, haciendo uso principalmente de una tarjeta de la familia de microcontroladores STM32 como es la Nucleó l746rg basada en núcleos ARM Cortex-M4 de 32 bits, de una pantalla  OLED I2C SSD1306 de 128x64, de un teclado  matricial de membrana 4x4 y un modulo WIFI esp8266 , y con dichas herramientas realizar el propósito mencionado, como es de que el usuario ingrese una clave predeterminada en el código y si dicha clave es ingresada incorrectamente  3 veces aparezca un estado de bloqueado (BLOCKED) , de lo contrario permita el acceso del usuario (SUCESS) , esto se implementará con los protocolos de comunicación tanto (USART e I2C) .
 
 ### Project Description
+<<<<<<< HEAD
 * 
+=======
+* Para realizar la implementación en la tarjeta NUCLEO-L476RG se identificó y configuro los periféricos necesarios para la cerradura digital. Donde se incluyó pines GPIO para el teclado o interfaz de usuario, Implementa el código para manejar la lógica de la cerradura digital. Esto podría incluir la entrada del código a través de un teclado, la verificación del código y otras funciones relacionadas con la cerradura, en el proyecto se tiene una interfaz de usuario, como es una pantalla OLED , donde se implementa el código necesario para interactuar con el usuario.
+
+* En el código sabemos que se va a implementar el protocolo de comunicación USART y se sabe que este protocolo funciona por interrupción y por ende funciona con un Callbcak que es utilizado en situaciones en las que se manejan eventos, interrupciones o respuestas a condiciones específicas (Cuando se presiona el botón en el teclado) para el protocolo USART se recibe los datos por bajo nivel (LL), y mediante la pantalla OLED la cual se comunica por el protocolo de comunicación serial I2C que permite la transferencia de datos entre dispositivos haciendo uso de un cable para la transmisión de datos (SDA) y otro para la señal de reloj (SCL). Para la configuración de esta pantalla OLED Al programar, generalmente se utilizan librerias específicas que simplifican el proceso de comunicación I2C con la SSD1306, para el proyecto fue la librería SDD1306 que maneja los detalles de bajo nivel, permitiéndote centrarte en el contenido que deseas mostrar en la pantalla.
+>>>>>>> project
 
 ### The keypad
 * Es la configuración de el teclado de membrana, donde este se caracteriza por tener un protocolo de comunicación USART, el cual puede funcionar tanto en modo síncrono como en modo asíncrono. En modo síncrono, el transmisor y el receptor comparten un reloj común, lo que elimina las pequeñas variaciones en la velocidad de transmisión. Esto es particularmente útil en entornos donde se requiere una sincronización precisa.
@@ -50,9 +56,18 @@ El proyecto tiene la funcionalidad principal  de implementación de una  cerradu
 
 ###The internet interface
 
+<<<<<<< HEAD
 
 * The system sends metrics to the internet every 24h by using an alarm of the embedded RTC.
 
 ## Contact info
 * Johan Eddy Chocue Otero - jchocueo@unal.edu.co
 * Iván Andrés Vivas Pismag - ivivas@unal.edu.co
+=======
+* The Debug console...
+* The internet interface...
+
+## Contact info
+* Johan Eddy Chocue Otero - jchocueo@unal.edu.co
+* Iván Andrés Vivas Pismag - ivivas@unal.edu.co
+>>>>>>> project
