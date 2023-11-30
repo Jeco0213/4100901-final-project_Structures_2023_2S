@@ -16,6 +16,9 @@ This repository contains the example for the final project of the course computa
     * Voltaje de operación entre 3V y 3,6V
     * Corriente de operación 80 mA
     * Temperatura de operación -40ºC y 125ºC
+  * Conectividad:
+    * Soporta IPv4 y los protocolos TCP/UDP/HTTP/FTP
+
 
 
 ## Firmware prerequisites
