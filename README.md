@@ -11,11 +11,11 @@ This repository contains the example for the final project of the course computa
 * ¿Qué es el ESP8266?: Se trata de un chip integrado con conexión WiFi y compatible con el protocolo TCP/IP. El objetivo principal es dar acceso a cualquier microcontrolador a una red.
 * La gran ventaja del ESP8266 es su bajo consumo. Es el producto ideal para wereables y dispositivos del IoT.
 * Especificaciones del chip ESP8266
-  Hardware:
-  * Utiliza una CPU Tensilica L106 32-bit
-  * Voltaje de operación entre 3V y 3,6V
-  * Corriente de operación 80 mA
-  * Temperatura de operación -40ºC y 125ºC
+  * Hardware:
+    * Utiliza una CPU Tensilica L106 32-bit
+    * Voltaje de operación entre 3V y 3,6V
+    * Corriente de operación 80 mA
+    * Temperatura de operación -40ºC y 125ºC
 
 
 ## Firmware prerequisites
