@@ -10,6 +10,10 @@ This repository contains the example for the final project of the course computa
 * The ESP8266 runs the esp-link [v2.2.3](https://github.com/jeelabs/esp-link/releases/tag/v2.2.3) firmware. Please follow the [serial flashing guide](https://github.com/jeelabs/esp-link/blob/master/FLASHING.md#initial-serial-flashing).
 * The STM32 runs the firmware compiled from this repository using STM32CubeIDE.
 
+## Theoretical basis
+* ¿Qué es el ESP8266?: Se trata de un chip integrado con conexión WiFi y compatible con el protocolo TCP/IP. El objetivo principal es dar acceso a cualquier microcontrolador a una red.
+* 
+
 ## Building and Flashing
 * Open the project in STM32CubeIDE.
 * Compile using the current project settings.
