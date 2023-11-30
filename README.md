@@ -37,7 +37,7 @@ La familia de microcontroladores STM32 está basada en núcleos ARM Cortex-M de 
 * Use an ST-LINK to flash the firmware into the STM32.
 
 ## Functionality
-El proyecto tiene la funcionalidad principal  de implementación de una  cerradura digital, haciendo uso principalmente de una tarjeta de la familia de microcontroladores STM32 como es la Nucleó l746rg basada en núcleos ARM Cortex-M4 de 32 bits, de una pantalla  OLED I2C SSD1306 de 128x64, de un teclado  matricial de membrana 4x4 y un modulo WIFI esp8266 , y con dichas herramientas realizar el propósito mencionado, como es de que el usuario ingrese una clave predeterminada en el código, y con ella permita el acceso o restricción del usuario , esto se implementará con los protocolos de comunicación tanto (USART e I2C).
+El proyecto tiene la funcionalidad principal  de implementación de una  cerradura digital, haciendo uso principalmente de una tarjeta de la familia de microcontroladores STM32 como es la Nucleó l746rg basada en núcleos ARM Cortex-M4 de 32 bits, de una pantalla  OLED I2C SSD1306 de 128x64, de un teclado  matricial de membrana 4x4 y un modulo WIFI esp8266 , y con dichas herramientas realizar el propósito mencionado, como es de que el usuario ingrese una clave predeterminada en el código y si dicha clave es ingresada incorrectamente  3 veces aparezca un estado de bloqueado (BLOCKED) , de lo contrario permita el acceso del usuario (SUCESS) , esto se implementará con los protocolos de comunicación tanto (USART e I2C) .
 
 ### Project Description
 * 
