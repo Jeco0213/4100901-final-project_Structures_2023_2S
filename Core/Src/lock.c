@@ -7,9 +7,9 @@
 #include <stdio.h>
 #include <string.h>
 
-
 #define MAX_PASSWORD 12
 
+uint8_t failed_counter = 0;
 
 uint8_t password[MAX_PASSWORD] = "1992";
 
@@ -17,7 +17,6 @@ uint8_t keypad_buffer[MAX_PASSWORD];
 ring_buffer_t keypad_rb;
 
 extern volatile uint16_t keypad_event;
-
 
 static uint8_t lock_get_passkey(void)
 {
@@ -91,8 +90,20 @@ static void lock_open_lock(void)
 {
 	if (lock_validate_password() != 0) {
 		GUI_unlocked();
+		HAL_Delay(5*1000);
+		failed_counter = 0; // reset the failure counter if succes
 	} else {
-		GUI_locked();
+		failed_counter++;
+		if (failed_counter < 3) {
+			/* 3.2 -> Show "Failed" if the string is incorrect */
+			GUI_locked();
+			HAL_Delay(3*1000);
+		} else {
+			/* 4 -> Show "Blocked" if the string is incorrect 3 times */
+			GUI_Blocked();
+			failed_counter = 0;
+			HAL_Delay(10*1000);
+				}
 	}
 }
 
@@ -106,6 +117,7 @@ void lock_sequence_handler(uint8_t key)
 {
 	if (key == '*') {
 		lock_update_password();
+		HAL_Delay(5*1000);
 	} else if (key == '#') {
 		lock_open_lock();
 	} else {

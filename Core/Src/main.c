@@ -78,8 +78,6 @@ int _write(int file, char *ptr, int len)
   return len;
 }
 
-
-
 void keypad_it_callback(uint16_t pin)
 {
 	keypad_event = pin;
@@ -125,6 +123,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   printf("Started\r\n");
   while (1)
   {
