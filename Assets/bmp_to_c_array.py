@@ -31,4 +31,4 @@ def bmp_to_c_array(filename, width, height, reverse_bits=False):
         file.write('\n};\n')
 
 # Example usage for a 30x30 image
-bmp_to_c_array('locked', 30, 30, reverse_bits=True)
+bmp_to_c_array('unlock', 30, 30, reverse_bits=True)
