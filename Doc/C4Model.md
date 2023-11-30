@@ -17,4 +17,11 @@ The STM32 runs a [controller-model-view](https://en.wikipedia.org/wiki/Model%E2%
 ![context](component.png)
 
 ## Code Diagram
-*TODO:* Add the code diagrams here.
+El diagrama de código en la imagen representa la interacción entre tres sistemas de software en un sistema de bloqueo:
+
+* KEYPAD: Este es el sistema que permite la entrada de datos del usuario. Este sistema recibe la entrada del usuario a través de un teclado de membrana y luego pasa esa entrada al sistema de bloqueo.
+
+* LOCK: Este es el sistema que gestiona el mecanismo de bloqueo. Recibe la entrada del usuario del sistema KEYPAD, verifica si la entrada es correcta y luego cambia el estado del bloqueo (bloqueado/desbloqueado) en consecuencia.
+
+* SCREEN OLED: Este es el sistema que muestra información al usuario. Puede mostrar el estado del bloqueo, mensajes de error si la entrada del usuario es incorrecta.
+![context](Code_diagram.png)
