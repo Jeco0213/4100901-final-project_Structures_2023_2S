@@ -18,6 +18,7 @@ This repository contains the example for the final project of the course computa
     * Temperatura de operación -40ºC y 125ºC
   * Conectividad:
     * Soporta IPv4 y los protocolos TCP/UDP/HTTP/FTP
+  * Puertos GPIO (de propósito general): 
 
 
 
