@@ -82,6 +82,30 @@ void keypad_it_callback(uint16_t pin)
 {
 	keypad_event = pin;
 }
+
+//void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+//    if (huart->Instance == USART3) {
+//        // Verificar si se recibió el delimitador de salto de línea
+//        if (byteRecibido == '\n') {
+//            // Convertir los dígitos recibidos en un número
+//            uint8_t number = 0;
+//            for (int i = 0; i < digitIndex; i++) {
+//                number = number * 10 + (receivedDigits[i] - '0');
+//                age = number;
+//            }
+//
+//            // Reiniciar el índice para el próximo número
+//            digitIndex = 0;
+//        } else if (digitIndex < 3) {
+//            // Almacenar el dígito recibido
+//            receivedDigits[digitIndex++] = byteRecibido;
+//        }
+//
+//        // Prepararse para recibir el siguiente byte
+//        HAL_UART_Receive_IT(&huart3, &byteRecibido, 1);
+//    }
+//}
+
 /* USER CODE END 0 */
 
 /**
