@@ -18,6 +18,18 @@ ring_buffer_t keypad_rb;
 
 extern volatile uint16_t keypad_event;
 
+// Función para encender el LED
+void Encender_LED(void)
+{
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+}
+
+// Función para apagar el LED
+void Apagar_LED(void)
+{
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+}
+
 static uint8_t lock_get_passkey(void)
 {
 	while (ring_buffer_size(&keypad_rb) == 0) {
@@ -90,6 +102,7 @@ static void lock_open_lock(void)
 {
 	if (lock_validate_password() != 0) {
 		GUI_unlocked();
+		Encender_LED();
 		HAL_Delay(5*1000);
 		failed_counter = 0; // reset the failure counter if succes
 	} else {
@@ -103,8 +116,9 @@ static void lock_open_lock(void)
 			GUI_Blocked();
 			failed_counter = 0;
 			HAL_Delay(10*1000);
-				}
+		}
 	}
+	Apagar_LED();
 }
 
 void lock_init(void)
