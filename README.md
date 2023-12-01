@@ -21,4 +21,4 @@ This repository contains the example for the final project of the course computa
 * The system sends metrics to the internet every 24h by using an alarm of the embedded RTC.
 
 ## Contact info
-* Sam C - saacifuentesmu@unal.edu.co
+* Sam C - saacifuentesmu@unal.edu.co   
