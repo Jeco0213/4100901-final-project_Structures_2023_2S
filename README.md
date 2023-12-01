@@ -56,4 +56,3 @@ El proyecto tiene la funcionalidad principal  de implementación de una  cerradu
 
 ## Contact info
 * Johan Eddy Chocue Otero - jchocueo@unal.edu.co
-* Iván Andrés Vivas Pismag - ivivas@unal.edu.co
