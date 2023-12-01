@@ -48,11 +48,16 @@ El proyecto tiene la funcionalidad principal  de implementación de una  cerradu
 * Es la configuración de el teclado de membrana, donde este se caracteriza por tener un protocolo de comunicación USART, el cual puede funcionar tanto en modo síncrono como en modo asíncrono. En modo síncrono, el transmisor y el receptor comparten un reloj común, lo que elimina las pequeñas variaciones en la velocidad de transmisión. Esto es particularmente útil en entornos donde se requiere una sincronización precisa.
 * Para ello se hizo uso de una librería, el código inicializa la funcionalidad del teclado estableciendo las filas en alto para ser detectadas en las columnas por interrupción ascendente. La función keypad_get_row debouncea e identifica eventos del teclado. Toma dos parámetros: COLUMN_x_GPIO_Port y COLUMN_x_Pin. La función devuelve el número de fila de la tecla presionada. La matriz keypad_map asigna los números de fila y columna al valor de tecla correspondiente
 
-###The Debug console
+### The Debug console
+La consola de depuración (Debug console) es una herramienta que te permite interactuar con tu programa mientras se está ejecutando en el microcontrolador STM32 L476RG. Puedes usarla para imprimir datos, lo que te permite ver el estado de las variables o los resultados de las operaciones en tiempo real mientras tu programa se está ejecutando.
 
-###The internet interface
+### The internet interface
+* El STM32L476RG es un microcontrolador de la familia STM32 que cuenta con una variedad de interfaces de comunicación. Sin embargo, no tiene una interfaz de internet incorporada como tal. Para conectarse a internet, generalmente necesitarías un módulo de red adicional, como un módulo Wi-Fi o Ethernet.
+
+* Dicho esto, el STM32L476RG sí tiene varias interfaces de comunicación que podrían usarse para interactuar con estos módulos de red. Por ejemplo, cuenta con interfaces de USART, SPI, y I2C1, que son comúnmente usadas para la comunicación con módulos de red u otros dispositivos periféricos.
 
 * The system sends metrics to the internet every 24h by using an alarm of the embedded RTC.
 
 ## Contact info
 * Johan Eddy Chocue Otero - jchocueo@unal.edu.co
+* Ivan Andrés Vivas Pismag - ivivas@unal.edu.co
